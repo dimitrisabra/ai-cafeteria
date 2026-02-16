@@ -1,0 +1,266 @@
+body {
+  background: linear-gradient(180deg, #f8f9fa 0%, #eef4ff 100%);
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.page-title {
+  font-weight: 700;
+}
+
+.navbar-logo {
+  height: 44px;
+  width: auto;
+}
+
+.navbar-brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.home-card {
+  border: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-cards-row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.home-card-image {
+  height: 140px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 10px;
+  transition: transform 0.25s ease;
+}
+
+.home-card:hover .home-card-image {
+  transform: scale(1.08);
+}
+
+.meal-card {
+  border: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.meal-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.meal-image {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.meal-card:hover .meal-image {
+  transform: scale(1.08);
+}
+
+.meal-tags .badge {
+  font-weight: 500;
+}
+
+.meal-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.star-rating {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.star-btn {
+  background: transparent;
+  border: 0;
+  font-size: 1.1rem;
+  color: #9aa0a6;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.star-btn.active {
+  color: #f5b301;
+}
+
+.daily-meal-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daily-card {
+  width: 100%;
+  max-width: 560px;
+  border: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.daily-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.daily-image {
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.daily-card:hover .daily-image {
+  transform: scale(1.06);
+}
+
+.chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1050;
+}
+
+.chat-float-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-float-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.chat-popup {
+  width: min(360px, calc(100vw - 30px));
+  height: 480px;
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.chat-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chat-icon-btn {
+  border: 0;
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.chat-popup-body,
+.chat-page-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 280px;
+}
+
+.chat-popup-footer {
+  padding: 10px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 8px;
+}
+
+.chat-msg {
+  max-width: 85%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  white-space: pre-line;
+}
+
+.chat-msg.user {
+  align-self: flex-end;
+  background: #0d6efd;
+  color: #ffffff;
+}
+
+.chat-msg.assistant {
+  align-self: flex-start;
+  background: #edf2f7;
+  color: #111827;
+}
+
+body.dark-mode {
+  background: linear-gradient(180deg, #10151e 0%, #162334 100%);
+  color: #eef2f7;
+}
+
+body.dark-mode .navbar {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.dark-mode .card {
+  background-color: #1f2937;
+  color: #eef2f7;
+}
+
+body.dark-mode .text-muted {
+  color: #c5ced8 !important;
+}
+
+body.dark-mode .meal-price {
+  color: #7eb8ff;
+}
+
+body.dark-mode .star-btn {
+  color: #7d8693;
+}
+
+body.dark-mode .star-btn.active {
+  color: #ffd250;
+}
+
+body.dark-mode .chat-popup {
+  background: #1f2937;
+  border-color: #334155;
+}
+
+body.dark-mode .chat-popup-header,
+body.dark-mode .chat-popup-footer {
+  border-color: #334155;
+}
+
+body.dark-mode .chat-icon-btn {
+  color: #e2e8f0;
+}
+
+body.dark-mode .chat-msg.assistant {
+  background: #334155;
+  color: #e2e8f0;
+}
