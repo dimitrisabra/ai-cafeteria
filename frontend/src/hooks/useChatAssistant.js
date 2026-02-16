@@ -109,7 +109,7 @@ export default function useChatAssistant() {
       const response = await axios.post(
         getChatUrl(),
         { message: text, clientDay: new Date().getDate() },
-        { timeout: 70000 }
+        { timeout: 60000 }
       );
       const assistantMessage = { role: "assistant", text: formatAssistantMessage(response.data, text) };
       updateMessages([...nextMessages, assistantMessage]);
