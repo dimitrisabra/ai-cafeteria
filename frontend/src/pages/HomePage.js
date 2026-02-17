@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import menuGif from "../home/menu.gif";
@@ -46,10 +46,37 @@ const homeCards = [
 ];
 
 function HomePage() {
+  const [showRenderNotice, setShowRenderNotice] = useState(
+    () => localStorage.getItem("hideRenderNotice") !== "true"
+  );
+
+  const closeRenderNotice = () => {
+    setShowRenderNotice(false);
+    localStorage.setItem("hideRenderNotice", "true");
+  };
+
   return (
     <div className="home-page">
       <h1 className="page-title mb-3 text-center">Welcome to the University Cafeteria</h1>
-      <p className="text-muted mb-4 text-center">Explore meals, pick today&rsquo;s special dish, get recommendations, and chat with AI.</p>
+
+      {showRenderNotice ? (
+        <div className="render-notice" role="status" aria-live="polite">
+          <span>AI features may take up to 1 minute on first use while the backend wakes up.</span>
+          <button
+            type="button"
+            className="render-notice-close"
+            aria-label="Close message"
+            onClick={closeRenderNotice}
+          >
+            x
+          </button>
+        </div>
+      ) : null}
+
+      <p className="text-muted mb-4 text-center">
+        Explore meals, pick today&rsquo;s special dish, get recommendations, and chat with AI.
+      </p>
+
       <Row className="g-3 justify-content-center home-cards-row">
         {homeCards.map((card) => (
           <Col md={6} lg={3} key={card.title}>
