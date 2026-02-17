@@ -264,3 +264,33 @@ body.dark-mode .chat-msg.assistant {
   background: #334155;
   color: #e2e8f0;
 }
+.render-notice {
+  margin: 0 auto 14px;
+  max-width: 820px;
+  padding: 10px 12px;
+  border: 1px solid #ffe69c;
+  background: #fff3cd;
+  color: #664d03;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.render-notice-close {
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+}
+
+body.dark-mode .render-notice {
+  background: #3a2f0a;
+  border-color: #6a5712;
+  color: #f6e7b0;
+}
+
