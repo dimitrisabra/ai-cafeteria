@@ -61,7 +61,11 @@ function HomePage() {
 
       {showRenderNotice ? (
         <div className="render-notice" role="status" aria-live="polite">
-          <span>AI features may take up to 1 minute on first use while the backend wakes up.</span>
+          <div className="render-notice-icon" aria-hidden="true">!</div>
+          <div className="render-notice-text">
+            <strong>AI Features Warming Up</strong>
+            <span>First chatbot or recommendation request may take up to 1 minute while the backend wakes up.</span>
+          </div>
           <button
             type="button"
             className="render-notice-close"
@@ -73,10 +77,7 @@ function HomePage() {
         </div>
       ) : null}
 
-      <p className="text-muted mb-4 text-center">
-        Explore meals, pick today&rsquo;s special dish, get recommendations, and chat with AI.
-      </p>
-
+      <p className="text-muted mb-4 text-center">Explore meals, pick today&rsquo;s special dish, get recommendations, and chat with AI.</p>
       <Row className="g-3 justify-content-center home-cards-row">
         {homeCards.map((card) => (
           <Col md={6} lg={3} key={card.title}>
